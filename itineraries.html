@@ -59,37 +59,46 @@
             </div>
         </section>
 
+        <section id="recommended-section" class="itinerary-gallery" style="display: none;">
+            <h2>Recommended for You</h2>
+            <div id="recommended-gallery" class="gallery">
+                <!-- Recommended itinerary will be inserted here by JavaScript -->
+            </div>
+        </section>
+
         <section class="itinerary-gallery">
-            <div class="gallery">
-                <a href="itinerary-single.html" class="gallery-item-link">
+            <h2>All Itineraries</h2>
+            <div id="itinerary-grid" class="gallery">
+                <a href="itinerary-single.html" class="gallery-item-link" data-style="culinary" data-duration="8" data-budget="4500">
                     <div class="gallery-item">
                         <img src="https://placehold.co/600x400/0A2240/FFFFFF/png?text=Rome" alt="A close-up of handmade pasta in Rome">
                         <h3>Roman Culinary Journey</h3>
-                        <p>8 Days | Culinary</p>
+                        <p>8 Days | Culinary | ~$4,500</p>
                     </div>
                 </a>
-                <a href="itinerary-single.html" class="gallery-item-link">
+                <a href="itinerary-single.html" class="gallery-item-link" data-style="cultural" data-duration="12" data-budget="7000">
                     <div class="gallery-item">
                         <img src="https://placehold.co/600x400/0A2240/FFFFFF/png?text=Kyoto" alt="A serene temple in Kyoto">
                         <h3>Ancient Temples of Japan</h3>
-                        <p>12 Days | Cultural</p>
+                        <p>12 Days | Cultural | ~$7,000</p>
                     </div>
                 </a>
-                <a href="itinerary-single.html" class="gallery-item-link">
+                <a href="itinerary-single.html" class="gallery-item-link" data-style="adventure" data-duration="10" data-budget="6000">
                     <div class="gallery-item">
                         <img src="https://placehold.co/600x400/0A2240/FFFFFF/png?text=Patagonia" alt="A person hiking in the mountains">
                         <h3>Patagonia Adventure</h3>
-                        <p>10 Days | Adventure</p>
+                        <p>10 Days | Adventure | ~$6,000</p>
                     </div>
                 </a>
-                 <a href="itinerary-single.html" class="gallery-item-link">
+                 <a href="itinerary-single.html" class="gallery-item-link" data-style="wellness" data-duration="7" data-budget="3500">
                     <div class="gallery-item">
                         <img src="https://placehold.co/600x400/0A2240/FFFFFF/png?text=Bali" alt="Yoga retreat in Bali">
                         <h3>Bali Wellness Retreat</h3>
-                        <p>7 Days | Wellness</p>
+                        <p>7 Days | Wellness | ~$3,500</p>
                     </div>
                 </a>
             </div>
+            <p id="no-results-message" style="display: none; text-align: center; margin-top: 2rem;">No itineraries match your current filter settings.</p>
         </section>
     </main>
 

@@ -63,4 +63,87 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         });
     }
+
+    // --- Itinerary Filtering Logic ---
+    const filtersContainer = document.querySelector('.filters');
+    if (filtersContainer) {
+        const styleFilter = document.getElementById('trip-style');
+        const durationFilter = document.getElementById('duration');
+        const durationValue = document.getElementById('duration-value');
+        const budgetFilter = document.getElementById('budget');
+
+        const itineraries = document.querySelectorAll('#itinerary-grid .gallery-item-link');
+        const noResultsMessage = document.getElementById('no-results-message');
+        const recommendedSection = document.getElementById('recommended-section');
+        const recommendedGallery = document.getElementById('recommended-gallery');
+
+        function filterItineraries() {
+            let visibleCount = 0;
+            let firstVisible = null;
+
+            const selectedStyle = styleFilter.value;
+            const selectedDuration = parseInt(durationFilter.value, 10);
+            const selectedBudget = budgetFilter.value;
+
+            itineraries.forEach(item => {
+                const itemStyle = item.dataset.style;
+                const itemDuration = parseInt(item.dataset.duration, 10);
+                const itemBudget = parseInt(item.dataset.budget, 10);
+
+                // Style check
+                const styleMatch = selectedStyle === 'all' || selectedStyle === itemStyle;
+
+                // Duration check (show items with duration <= selected)
+                const durationMatch = itemDuration <= selectedDuration;
+
+                // Budget check
+                let budgetMatch = false;
+                if (selectedBudget === 'all') {
+                    budgetMatch = true;
+                } else {
+                    const budgetRange = {
+                        '3000': [3000, 5000],
+                        '5000': [5000, 8000],
+                        '8000': [8000, Infinity]
+                    };
+                    const [min, max] = budgetRange[selectedBudget];
+                    budgetMatch = itemBudget >= min && itemBudget < max;
+                }
+
+                if (styleMatch && durationMatch && budgetMatch) {
+                    item.style.display = 'block';
+                    visibleCount++;
+                    if (!firstVisible) {
+                        firstVisible = item;
+                    }
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Update UI based on visible count
+            noResultsMessage.style.display = visibleCount === 0 ? 'block' : 'none';
+
+            if (firstVisible) {
+                recommendedSection.style.display = 'block';
+                recommendedGallery.innerHTML = ''; // Clear previous recommendation
+                const recommendedClone = firstVisible.cloneNode(true);
+                // Optional: remove the link from the recommended item to avoid confusion
+                // recommendedClone.href = 'javascript:void(0);';
+                recommendedGallery.appendChild(recommendedClone);
+            } else {
+                recommendedSection.style.display = 'none';
+            }
+        }
+
+        filtersContainer.addEventListener('change', filterItineraries);
+        durationFilter.addEventListener('input', () => {
+            // Update the duration value display
+            durationValue.textContent = durationFilter.value + ' Days';
+            filterItineraries();
+        });
+
+        // Initial filter on page load
+        filterItineraries();
+    }
 });

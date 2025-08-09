@@ -288,6 +288,32 @@ footer {
     cursor: pointer;
 }
 
+/* --- Recommended Section --- */
+#recommended-section {
+    background-color: #eef3fA; /* A very light blue to differentiate */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+#recommended-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+#recommended-section .gallery {
+    max-width: 350px; /* Make the recommended item smaller */
+    margin: 0 auto;
+    grid-template-columns: 1fr; /* Ensure it's a single column */
+}
+
+#no-results-message {
+    font-size: 1.2rem;
+    color: #666;
+}
+
 /* --- WanderWise Journal (Blog) --- */
 
 /* --- Blog Listing Page --- */
