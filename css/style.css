@@ -363,61 +363,82 @@ footer {
 }
 
 /* --- Dark Mode Styles --- */
-.dark-mode {
+body.dark-mode {
     background-color: var(--navy-blue);
+    color: var(--light-gray);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
     color: var(--white);
 }
 
-.dark-mode header {
+body.dark-mode header {
     background: var(--navy-blue);
     border-bottom-color: #081f3a;
 }
 
-.dark-mode .logo,
-.dark-mode nav ul li a {
+body.dark-mode .logo,
+body.dark-mode nav ul li a {
     color: var(--white);
 }
 
-.dark-mode .theme-toggle-btn {
+body.dark-mode .theme-toggle-btn {
     border-color: var(--white);
     color: var(--white);
 }
 
-.dark-mode .gallery-item {
+body.dark-mode .gallery-item {
     background: #081f3a; /* Slightly lighter navy */
 }
 
-.dark-mode .why-wanderwise {
+body.dark-mode .why-wanderwise {
     background: #061a31; /* Even darker navy */
 }
 
-.dark-mode footer,
-.dark-mode .filters,
-.dark-mode .post-preview {
+body.dark-mode footer,
+body.dark-mode .filters,
+body.dark-mode .post-preview {
     background: #081f3a;
 }
 
-.dark-mode,
-.dark-mode .day h3,
-.dark-mode .post-meta {
-    color: var(--light-gray);
+body.dark-mode .day h3,
+body.dark-mode .post-meta {
+    color: #bbb; /* Lighter gray for metadata */
 }
 
-.dark-mode .booking-box {
+body.dark-mode .booking-box {
     background: #081f3a;
 }
 
-.dark-mode .itinerary-main h2 {
+body.dark-mode .itinerary-main h2 {
     border-bottom-color: var(--accent-ochre);
 }
 
-.dark-mode #no-results-message {
+body.dark-mode #no-results-message {
     color: var(--light-gray);
 }
 
-.dark-mode #recommended-section {
+body.dark-mode #recommended-section {
     background-color: #061a31;
     border-bottom-color: #081f3a;
+}
+
+body.dark-mode .modal-content {
+    background-color: #081f3a;
+    color: var(--white);
+}
+
+body.dark-mode #booking-form label {
+    color: var(--light-gray);
+}
+
+body.dark-mode #booking-form input,
+body.dark-mode #booking-form textarea {
+    background-color: #0A2240;
+    border-color: #334;
+    color: var(--white);
 }
 
 /* --- WanderWise Journal (Blog) --- */

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patagonia Adventure - WanderWise</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">WanderWise</a>
+            <ul>
+                <li><a href="itineraries.html">Itineraries</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle-btn">☀️</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="itinerary-hero" style="background-image: url('https://picsum.photos/seed/patagonia-pano/1920/600');">
+            <h1>Patagonia Adventure</h1>
+        </section>
+
+        <div class="itinerary-container">
+            <div class="itinerary-main">
+                <section class="itinerary-overview">
+                    <h2>Trip Overview</h2>
+                    <p>Embark on a 10-day adventure through the rugged, untamed landscapes of Patagonia. From hiking glaciers to witnessing the iconic peaks of Fitz Roy, this trip is for the true adventurer at heart.</p>
+                </section>
+
+                <section class="itinerary-details">
+                    <h2>Day-by-Day Itinerary</h2>
+                    <div class="day">
+                        <h3>Day 1-3: El Chaltén & Fitz Roy</h3>
+                        <p>Arrive in El Chaltén, the hiking capital of Argentina. Embark on world-class treks to Laguna de los Tres for breathtaking views of Mount Fitz Roy.</p>
+                    </div>
+                    <div class="day">
+                        <h3>Day 4-6: Perito Moreno Glacier</h3>
+                        <p>Travel to El Calafate and witness the awe-inspiring Perito Moreno Glacier. Take a boat tour to see the glacier calving up close.</p>
+                    </div>
+                    <div class="day">
+                        <h3>Day 7-9: Torres del Paine National Park</h3>
+                        <p>Cross into Chile to explore the stunning Torres del Paine National Park, famous for its granite pillars, turquoise lakes, and abundant wildlife.</p>
+                    </div>
+                    <!-- More days would be added here -->
+                </section>
+
+                <section class="itinerary-gallery">
+                    <h2>Gallery</h2>
+                    <div class="photo-grid">
+                        <img src="https://picsum.photos/seed/fitz-roy/600/400" alt="Mount Fitz Roy">
+                        <img src="https://picsum.photos/seed/glacier/600/400" alt="Perito Moreno Glacier">
+                        <img src="https://picsum.photos/seed/torres-del-paine/600/400" alt="Torres del Paine">
+                        <img src="https://picsum.photos/seed/hiking/600/400" alt="Hiking in Patagonia">
+                    </div>
+                </section>
+
+                <section class="itinerary-map">
+                    <h2>Route Map</h2>
+                    <!-- Placeholder for Google Maps Embed -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643833.839281788!2d-73.48918524687499!3d-50.59424289999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbdbb2053411adb1d%3A0x9b313365b6c34e0!2sLos%20Glaciares%20National%20Park!5e0!3m2!1sen!2sus!4v16788865 Patagonia" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </section>
+            </div>
+
+            <aside class="itinerary-sidebar">
+                <div class="booking-box">
+                    <h3>Trip Details</h3>
+                    <p><strong>Duration:</strong> 10 Days</p>
+                    <p><strong>Style:</strong> Adventure</p>
+                    <p><strong>Price:</strong> Starting from $6,000</p>
+                    <button id="request-booking-btn" class="cta-button">Request to Book</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Request to Book</h2>
+            <p>Please fill out the form below, and one of our travel specialists will be in touch shortly.</p>
+            <form id="booking-form">
+                <input type="hidden" name="itinerary" value="Patagonia Adventure">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="travelers">Number of Travelers</label>
+                    <input type="number" id="travelers" name="travelers" min="1" value="2" required>
+                </div>
+                <div class="form-group">
+                    <label for="preferences">Travel Preferences</label>
+                    <textarea id="preferences" name="preferences" rows="4" placeholder="e.g., preferred travel dates, special interests, dietary restrictions..."></textarea>
+                </div>
+                <button type="submit" class="cta-button">Send Inquiry</button>
+            </form>
+            <div id="form-status"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 WanderWise. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
