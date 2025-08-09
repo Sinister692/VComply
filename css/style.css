@@ -57,10 +57,47 @@ nav ul li a {
 
 /* --- Hero Section --- */
 .hero {
-    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    background: url('https://picsum.photos/seed/hero/1920/1080') no-repeat center center/cover;
     color: var(--white);
     text-align: center;
     padding: 8rem 0;
+}
+
+/* --- Video Hero Section --- */
+.hero-video {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    overflow: hidden; /* Ensures video doesn't spill out */
+}
+
+#heroVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    background-size: cover;
+}
+
+.hero-video .hero-content {
+    background: rgba(10, 34, 64, 0.6);
+    padding: 2rem;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.hero-video .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
 }
 
 .hero-content h1 {
@@ -312,6 +349,75 @@ footer {
 #no-results-message {
     font-size: 1.2rem;
     color: #666;
+}
+
+/* --- Theme Toggler --- */
+.theme-toggle-btn {
+    background: none;
+    border: 1px solid var(--navy-blue);
+    color: var(--navy-blue);
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* --- Dark Mode Styles --- */
+.dark-mode {
+    background-color: var(--navy-blue);
+    color: var(--white);
+}
+
+.dark-mode header {
+    background: var(--navy-blue);
+    border-bottom-color: #081f3a;
+}
+
+.dark-mode .logo,
+.dark-mode nav ul li a {
+    color: var(--white);
+}
+
+.dark-mode .theme-toggle-btn {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.dark-mode .gallery-item {
+    background: #081f3a; /* Slightly lighter navy */
+}
+
+.dark-mode .why-wanderwise {
+    background: #061a31; /* Even darker navy */
+}
+
+.dark-mode footer,
+.dark-mode .filters,
+.dark-mode .post-preview {
+    background: #081f3a;
+}
+
+.dark-mode,
+.dark-mode .day h3,
+.dark-mode .post-meta {
+    color: var(--light-gray);
+}
+
+.dark-mode .booking-box {
+    background: #081f3a;
+}
+
+.dark-mode .itinerary-main h2 {
+    border-bottom-color: var(--accent-ochre);
+}
+
+.dark-mode #no-results-message {
+    color: var(--light-gray);
+}
+
+.dark-mode #recommended-section {
+    background-color: #061a31;
+    border-bottom-color: #081f3a;
 }
 
 /* --- WanderWise Journal (Blog) --- */

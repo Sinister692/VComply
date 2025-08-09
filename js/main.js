@@ -146,4 +146,37 @@ document.addEventListener('DOMContentLoaded', function() {
         // Initial filter on page load
         filterItineraries();
     }
+
+    // --- Theme Toggler Logic ---
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.textContent = '☀️'; // Sun icon for light mode
+        } else {
+            body.classList.remove('dark-mode');
+            themeToggle.textContent = '🌙'; // Moon icon for dark mode
+        }
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', newTheme);
+        applyTheme(newTheme);
+    });
+
+    // On page load, apply saved theme or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else if (prefersDark) {
+        applyTheme('dark');
+    } else {
+        applyTheme('light'); // Default to light
+    }
 });
