@@ -1,0 +1,15 @@
+/* --- Design Canvas 1: Asymmetrical Gallery --- */
+.gallery-asymmetric {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+
+.gallery-asymmetric .gallery-item:nth-child(2) {
+    grid-row: span 2;
+}
+
+.gallery-asymmetric .gallery-item img {
+    height: 100%;
+}

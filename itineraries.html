@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Itineraries - WanderWise</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">WanderWise</a>
+            <ul>
+                <li><a href="itineraries.html">Itineraries</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Discover Your Next Journey</h1>
+        </section>
+
+        <section class="filters">
+            <div class="filter-group">
+                <label for="destination">Destination</label>
+                <select id="destination" name="destination">
+                    <option value="all">All</option>
+                    <option value="italy">Italy</option>
+                    <option value="japan">Japan</option>
+                    <option value="argentina">Argentina</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="trip-style">Trip Style</label>
+                <select id="trip-style" name="trip-style">
+                    <option value="all">All</option>
+                    <option value="culinary">Culinary</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="wellness">Wellness</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="duration">Duration</label>
+                <input type="range" id="duration" name="duration" min="3" max="21" value="12">
+                <span id="duration-value">12 Days</span>
+            </div>
+            <div class="filter-group">
+                <label for="budget">Budget</label>
+                <select id="budget" name="budget">
+                    <option value="all">All</option>
+                    <option value="3000">$3,000 - $5,000</option>
+                    <option value="5000">$5,000 - $8,000</option>
+                    <option value="8000">$8,000+</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="itinerary-gallery">
+            <div class="gallery">
+                <a href="itinerary-single.html" class="gallery-item-link">
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/0A2240/FFFFFF/png?text=Rome" alt="A close-up of handmade pasta in Rome">
+                        <h3>Roman Culinary Journey</h3>
+                        <p>8 Days | Culinary</p>
+                    </div>
+                </a>
+                <a href="itinerary-single.html" class="gallery-item-link">
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/0A2240/FFFFFF/png?text=Kyoto" alt="A serene temple in Kyoto">
+                        <h3>Ancient Temples of Japan</h3>
+                        <p>12 Days | Cultural</p>
+                    </div>
+                </a>
+                <a href="itinerary-single.html" class="gallery-item-link">
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/0A2240/FFFFFF/png?text=Patagonia" alt="A person hiking in the mountains">
+                        <h3>Patagonia Adventure</h3>
+                        <p>10 Days | Adventure</p>
+                    </div>
+                </a>
+                 <a href="itinerary-single.html" class="gallery-item-link">
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/600x400/0A2240/FFFFFF/png?text=Bali" alt="Yoga retreat in Bali">
+                        <h3>Bali Wellness Retreat</h3>
+                        <p>7 Days | Wellness</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WanderWise. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        const durationSlider = document.getElementById('duration');
+        const durationValue = document.getElementById('duration-value');
+        durationSlider.oninput = function() {
+            durationValue.textContent = this.value + ' Days';
+        }
+    </script>
+</body>
+</html>

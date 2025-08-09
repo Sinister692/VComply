@@ -1,0 +1,462 @@
+/* --- Brand Colors --- */
+:root {
+    --navy-blue: #0A2240;
+    --white: #FFFFFF;
+    --accent-ochre: #D97D54;
+    --light-gray: #f4f4f4;
+}
+
+/* --- Typography --- */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: var(--navy-blue);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+}
+
+/* --- Header --- */
+header {
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.logo {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--navy-blue);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--navy-blue);
+    font-weight: bold;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 8rem 0;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: var(--accent-ochre);
+    color: var(--white);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* --- Featured Itineraries --- */
+.featured-itineraries {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.featured-itineraries h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.gallery-item {
+    background: var(--light-gray);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-item h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+/* --- Why WanderWise --- */
+.why-wanderwise {
+    background: var(--navy-blue);
+    color: var(--white);
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.why-wanderwise h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.reasons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reason h3 {
+    color: var(--accent-ochre);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--light-gray);
+}
+
+/* --- Itinerary Discovery Page --- */
+.page-header {
+    background: var(--navy-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 5%;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 5%;
+    background: var(--light-gray);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.filter-group select, .filter-group input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.itinerary-gallery {
+    padding: 4rem 5%;
+}
+
+.itinerary-gallery .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Individual Itinerary Page --- */
+.itinerary-hero {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.itinerary-hero h1 {
+    font-size: 3.5rem;
+    background: rgba(10, 34, 64, 0.6);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+
+.itinerary-container {
+    display: flex;
+    gap: 2rem;
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.itinerary-main {
+    flex: 3;
+}
+
+.itinerary-sidebar {
+    flex: 1;
+}
+
+.itinerary-main section {
+    margin-bottom: 3rem;
+}
+
+.itinerary-main h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--accent-ochre);
+    padding-bottom: 0.5rem;
+}
+
+.day {
+    margin-bottom: 1.5rem;
+}
+
+.day h3 {
+    color: var(--navy-blue);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.photo-grid img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.itinerary-map iframe {
+    border-radius: 5px;
+}
+
+.booking-box {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 5px;
+    position: sticky;
+    top: 2rem;
+}
+
+.booking-box h3 {
+    margin-top: 0;
+}
+
+.booking-box .cta-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent-ochre);
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* --- WanderWise Journal (Blog) --- */
+
+/* --- Blog Listing Page --- */
+.blog-listing {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+
+.post-preview {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    background: var(--light-gray);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.post-preview img {
+    width: 40%;
+    object-fit: cover;
+}
+
+.preview-content {
+    padding: 2rem;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.preview-content h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--accent-ochre);
+    text-decoration: none;
+}
+
+/* --- Single Post Page --- */
+.blog-post .post-header {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--white);
+    text-align: center;
+    padding: 3rem;
+}
+
+.post-header-content {
+    background: rgba(10, 34, 64, 0.7);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.post-header-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.post-header-content .post-meta {
+    color: var(--light-gray);
+    margin-top: 0.5rem;
+}
+
+.post-content {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 5%;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.post-content .lead {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.post-content h2 {
+    font-size: 2rem;
+    margin: 3rem 0 1.5rem;
+}
+
+.post-content figure {
+    margin: 2rem 0;
+}
+
+.post-content figure img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.post-content figure figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* --- Booking Modal --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#booking-form .form-group {
+    margin-bottom: 1rem;
+}
+
+#booking-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#booking-form input,
+#booking-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#form-status {
+    margin-top: 1rem;
+    font-weight: bold;
+}

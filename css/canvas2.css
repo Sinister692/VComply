@@ -1,0 +1,53 @@
+/* --- Design Canvas 2: Minimalist & Editorial --- */
+
+/* --- Hero Section --- */
+.hero-split {
+    display: flex;
+    align-items: center;
+    padding: 4rem 5%;
+}
+
+.hero-split .hero-content {
+    flex: 1;
+}
+
+.hero-split .hero-image {
+    flex: 1;
+}
+
+.hero-split .hero-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* --- Featured Itineraries --- */
+.featured-itineraries-single-column .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.featured-itineraries-single-column .gallery-item {
+    position: relative;
+    background: none;
+}
+
+.featured-itineraries-single-column .gallery-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.featured-itineraries-single-column .item-content {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: var(--white);
+    background: rgba(10, 34, 64, 0.7);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.featured-itineraries-single-column .item-content h3 {
+    margin: 0;
+    color: var(--white);
+}

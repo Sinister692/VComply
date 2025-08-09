@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Culinary Journey - WanderWise</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">WanderWise</a>
+            <ul>
+                <li><a href="itineraries.html">Itineraries</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="itinerary-hero" style="background-image: url('https://placehold.co/1920x600/0A2240/FFFFFF/png?text=Rome+Panorama');">
+            <h1>Roman Culinary Journey</h1>
+        </section>
+
+        <div class="itinerary-container">
+            <div class="itinerary-main">
+                <section class="itinerary-overview">
+                    <h2>Trip Overview</h2>
+                    <p>Embark on an 8-day gastronomic adventure through Rome. From hands-on cooking classes to tours of historic food markets, you'll taste the very best of the Eternal City. This journey is a feast for the senses, blending iconic sights with authentic culinary traditions.</p>
+                </section>
+
+                <section class="itinerary-details">
+                    <h2>Day-by-Day Itinerary</h2>
+                    <div class="day">
+                        <h3>Day 1: Arrival & Aperitivo</h3>
+                        <p>Arrive in Rome, check into your boutique hotel, and join us for a classic Italian aperitivo to kick off your journey.</p>
+                    </div>
+                    <div class="day">
+                        <h3>Day 2: Ancient Rome & Trastevere Tasting</h3>
+                        <p>Explore the Colosseum and Roman Forum, followed by a guided food tour through the charming streets of Trastevere.</p>
+                    </div>
+                    <div class="day">
+                        <h3>Day 3: Vatican City & Pasta Making</h3>
+                        <p>Visit the Vatican Museums and St. Peter's Basilica. In the evening, learn to make fresh pasta from a local chef.</p>
+                    </div>
+                    <!-- More days would be added here -->
+                </section>
+
+                <section class="itinerary-gallery">
+                    <h2>Gallery</h2>
+                    <div class="photo-grid">
+                        <img src="https://placehold.co/600x400/D97D54/FFFFFF/png?text=Pasta" alt="Handmade pasta">
+                        <img src="https://placehold.co/600x400/D97D54/FFFFFF/png?text=Market" alt="Food market in Rome">
+                        <img src="https://placehold.co/600x400/D97D54/FFFFFF/png?text=Trastevere" alt="Streets of Trastevere">
+                        <img src="https://placehold.co/600x400/D97D54/FFFFFF/png?text=Wine" alt="Glass of Italian wine">
+                    </div>
+                </section>
+
+                <section class="itinerary-map">
+                    <h2>Route Map</h2>
+                    <!-- Placeholder for Google Maps Embed -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190028.35334335863!2d12.39591294251419!3d41.90998603434644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2sRome%2C%20Metropolitan%20City%20of%20Rome%20Capital%2C%20Italy!5e0!3m2!1sen!2sus!4v16788865 Rome" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </section>
+            </div>
+
+            <aside class="itinerary-sidebar">
+                <div class="booking-box">
+                    <h3>Trip Details</h3>
+                    <p><strong>Duration:</strong> 8 Days</p>
+                    <p><strong>Style:</strong> Culinary</p>
+                    <p><strong>Price:</strong> Starting from $4,500</p>
+                    <button id="request-booking-btn" class="cta-button">Request to Book</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Request to Book</h2>
+            <p>Please fill out the form below, and one of our travel specialists will be in touch shortly.</p>
+            <form id="booking-form">
+                <input type="hidden" name="itinerary" value="Roman Culinary Journey">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="travelers">Number of Travelers</label>
+                    <input type="number" id="travelers" name="travelers" min="1" value="2" required>
+                </div>
+                <div class="form-group">
+                    <label for="preferences">Travel Preferences</label>
+                    <textarea id="preferences" name="preferences" rows="4" placeholder="e.g., preferred travel dates, special interests, dietary restrictions..."></textarea>
+                </div>
+                <button type="submit" class="cta-button">Send Inquiry</button>
+            </form>
+            <div id="form-status"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 WanderWise. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
